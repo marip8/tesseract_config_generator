@@ -3,6 +3,7 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/tesseract_config_generator/',
   build: {
     outDir: 'build',
   },
