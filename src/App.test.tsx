@@ -1,12 +1,11 @@
 import App from './App';
-import { test } from 'vitest';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { expect, test } from 'vitest';
+import { render, screen } from '@testing-library/react';
 
 /**
  * Smoke test for the App component.
  */
-test('renders without crashing', () => {
+test('renders the file workspace', () => {
   render(<App />);
-  // does not crash on pressing clear data
-  act(() => fireEvent.click(screen.getByTestId('clear-data')));
+  expect(screen.getByTestId('file-list')).toBeTruthy();
 });
